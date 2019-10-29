@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Express HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div style="margin:100px;">
+    <nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Express HTML</a>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="info.html">Info</a>
+      </li>
+      <li>
+        <a href="search.html">Sitemap</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<form>
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input id="leo" type="text" name="firstname" value=""><br>
+    Last name:<br>
+    <input type="text" name="lastname" value=""><br><br>
+    <button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+  alert(document.getElementById('leo').value);
+}
+</script>
+
+  </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    /* margin: 40px; */
+    font-family: 'Orbitron', sans-serif;
+    font: Orbitron;
+}
+.bodyImg {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+#text {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.searchInput {
+    display: flex;
+}
+#searchbox {
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+    padding: 3px 5px 3px 5px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.inpWrapper {
+    margin: auto;
+}
+#searchbox:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 10px black;
+}
+#searchbutton {
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: black;
+    border-color: white;
+    color: white;
+    font-size: 32px;
+}
+#searchbutton:active {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 10px black;
+}
+#searchbutton:focus {
+    outline-color: white;
+    border-color: none;
+    box-shadow: 0 0 10px black;
+}
+#searchbutton:hover {
+    cursor: pointer;
+}
+.header {
+    grid-area: header;
+    margin: auto;
+}
+.footer {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    bottom: 0px;
+}
+#seemore {
+    margin: auto;
+    justify-content: center;
+}
+html,
+body {
+    height: 100%;
+}

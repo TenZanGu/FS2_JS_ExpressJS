@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Express HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Client Or Admin</h1>
+    <input type="text" name="user" id="user">
+    <button id="submit">Submit</button>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var user = document.getElementById('user')
+        var submit = document.getElementById('submit')
+        submit.addEventListener('click', (e) => {
+            e.preventDefault();
+            var userId=0;
+            if(user.value.toLowerCase()=="admin"){
+                userId=1;
+            }
+            axios.post('http://localhost:80/authorizeUser', {
+                    user:userId
+                })
+                .then(function (response) {
+                    alert(response.data.message)
+                    if(response.data.result=="admin"){
+                        window.location.href="http://localhost:80/search.html"
+                    }
+                    else{
+                        window.location.href="http://localhost:80/info.html"
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        })
+    </script>
+</body>
+
+</html>
